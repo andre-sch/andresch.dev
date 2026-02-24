@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 64rem;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.socials {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.socials a {
+  transition: filter 0.2s;
+}
+
+.socials a:hover {
+  filter: brightness(1.2);
+}

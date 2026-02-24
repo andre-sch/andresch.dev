@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 64rem;
+  height: calc(100vh - 5.75rem);
+  padding-inline: 2rem;
+  padding-top: 25vh;
+}
+
+.text {
+  max-width: 28rem;
+}
+
+.text h1 {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.1em;
+}
+
+.text h2 {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.text p {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
