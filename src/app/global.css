@@ -9,26 +9,19 @@
   box-sizing: border-box;
 }
 
-ol, ul {
-	list-style: none;
-}
-
-.dark {
+:root {
   --bg: hsl(0, 0%, 0%);
   --text: hsl(0, 0%, 95%);
   --text-muted: hsl(0, 0%, 70%);
   --primary: oklch(71.4% 0.203 305.504);
 }
 
-.light {
-  --bg: hsl(0, 0%, 95%);
-  --text: hsl(0, 0%, 5%);
-  --text-muted: hsl(0, 0%, 30%);
-  --primary: oklch(62.7% 0.265 303.9);
-}
-
 body {
   line-height: 1.4em;
   background: var(--bg);
   color: var(--text);
+}
+
+ol, ul {
+	list-style: none;
 }
