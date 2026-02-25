@@ -19,18 +19,20 @@
 }
 
 .text h1 {
-  line-height: 1.1em;
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1.2em;
 }
 
 .text a {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
+  text-decoration: underline;
   background: linear-gradient(90deg, oklch(62.7% 0.265 303.9), oklch(64.5% 0.246 16.439));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  line-height: 1.2em;
   font-size: 2rem;
   font-weight: 700;
 }
