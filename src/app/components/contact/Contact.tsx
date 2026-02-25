@@ -8,7 +8,7 @@ export function Contact() {
         <div className={styles.text}>
           <h1>Precisa de um site profissional?</h1>
           <Link href="https://wa.me/5544999230461" target="_blank">
-            Entre em contato
+            Entrar em contato
           </Link>
         </div>
       </div>
