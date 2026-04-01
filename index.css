@@ -1,0 +1,41 @@
+*,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 100%;
+  font-family: "Raleway", sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --bg0: hsl(0, 0, 10);
+  --bg1: hsl(0, 0, 15);
+  --bg2: hsl(0, 0, 20);
+  --bg3: hsl(0, 0, 25);
+  --bg4: hsl(0, 0, 30);
+  --text: hsl(0, 0, 90);
+  --text-muted: hsl(0, 0, 90);
+  --top-highlight-sm: 0px 1px 0px 0px hsl(0, 0, 50);
+  --top-highlight-md: 0px 2px 0px 0px hsl(0, 0, 50);
+  --shadow-sm: 0 1px 3px 0 hsla(0, 0, 0, 0.1), 0 1px 2px -1px hsla(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px hsla(0, 0, 0, 0.1), 0 2px 4px -2px hsla(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px hsla(0, 0, 0, 0.1), 0 4px 6px -4px hsla(0, 0, 0, 0.1);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+body {
+  background-color: var(--bg0);
+  color: var(--text);
+}
