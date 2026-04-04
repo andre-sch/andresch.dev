@@ -204,7 +204,7 @@ section.hero {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  padding: 4rem 0;
+  padding-top: 4rem;
   min-height: calc(100vh - 4.5rem);
 }
 
@@ -290,6 +290,7 @@ section.hero .dark-overlay {
 section.hero img {
   z-index: 1;
   position: relative;
+  display: block;
   width: 40vw;
   max-width: 25rem;
   height: auto;
@@ -316,7 +317,7 @@ section.hero .blur-highlight.purple {
 }
 
 section.products {
-  padding-bottom: 6rem;
+  padding-top: 4rem;
 }
 
 section.products > h1 {
@@ -379,7 +380,7 @@ section.products .product-card p {
 }
 
 section.pricing {
-  padding-bottom: 6rem;
+  padding-block: 6rem;
 }
 
 section.pricing > h1 {
