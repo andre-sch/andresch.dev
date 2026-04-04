@@ -555,6 +555,10 @@ footer .social-links a:hover svg {
     opacity: 0.5;
     filter: blur(2px);
   }
+
+  section.pricing .pricing-card:not(.focus) a {
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 960px) {
