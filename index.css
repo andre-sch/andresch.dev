@@ -535,9 +535,9 @@ section .pricing-plans .features li::before {
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem;
-  height: 9rem;
+  padding-bottom: 6rem;
 }
 
 footer .logo {
