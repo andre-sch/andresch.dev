@@ -27,6 +27,7 @@ a {
   --bg2: hsl(0, 0%, 20%);
   --bg3: hsl(0, 0%, 25%);
   --bg4: hsl(0, 0%, 30%);
+  --bg5: hsl(0, 0%, 35%);
   --text: hsl(0, 0%, 90%);
   --text-muted: hsl(0, 0%, 70%);
   --top-highlight-sm: 0px -1px 0px 0px hsl(0, 0%, 50%);
@@ -284,7 +285,7 @@ section.hero .blur-highlight:last-of-type {
 }
 
 section.products {
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 section.products > h1 {
@@ -331,6 +332,116 @@ section.products .product-card p {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-muted);
+}
+
+section.pricing {
+  padding-bottom: 6rem;
+}
+
+section.pricing > h1 {
+  line-height: 1.3;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+section.pricing > p {
+  margin-top: 1rem;
+  max-width: 35rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+section.pricing > ul {
+  position: relative;
+  display: flex;
+  gap: 1.875rem;
+  margin-top: 4rem;
+}
+
+section.pricing .pricing-card {
+  height: 100%;
+  padding-block: 1.25rem 3rem;
+  padding-inline: 1.75rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(0deg, var(--bg1) 0%, var(--bg2) 100%);
+  box-shadow: var(--shadow-md), var(--top-highlight-md);
+  color: var(--text);
+}
+
+section.pricing li:nth-child(2) .pricing-card {
+  margin-top: -1.5rem;
+  height: calc(100% + 1.5rem);
+}
+
+section.pricing .pricing-card h1 {
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+section.pricing .pricing-card h2 {
+  margin-top: 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+section.pricing li:last-child .pricing-card h2 {
+  font-size: 1.5rem;
+}
+
+section.pricing .pricing-card p {
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+section.pricing .pricing-card a {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  background: linear-gradient(0deg, var(--bg3) 0%, var(--bg4) 100%);
+  box-shadow: var(--shadow-md), var(--top-highlight-sm);
+  border-radius: var(--radius-md);
+}
+
+section.pricing .pricing-card a:hover {
+  background: linear-gradient(0deg, var(--bg4) 0%, var(--bg5) 100%);
+}
+
+section.pricing .features {
+  margin-top: 1.5rem;
+}
+
+section.pricing .features li {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+section.pricing .features li + li {
+  margin-top: 0.5rem;
+}
+
+section.pricing .features li::before {
+  content: "";
+  position: absolute;
+  top: 0.625rem;
+  left: 0.5rem;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  background: var(--text-muted);
+  border-radius: 50%;
 }
 
 footer {
