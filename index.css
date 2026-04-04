@@ -336,8 +336,9 @@ section.products .product-card p {
 footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 2rem;
+  height: 9rem;
 }
 
 footer .logo {
