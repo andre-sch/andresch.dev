@@ -388,7 +388,7 @@ section .pricing-plans > button svg {
 }
 
 section .pricing-plans .pricing-card {
-  width: 22rem;
+  width: 21.375rem;
   flex-shrink: 0;
   padding-block: 1.25rem 3rem;
   padding-inline: 1.75rem 1.5rem;
