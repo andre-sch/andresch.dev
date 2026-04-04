@@ -191,6 +191,7 @@ header .menu-button svg {
 
 main {
   padding: 0 2rem;
+  overflow-x: hidden;
 }
 
 section.hero {
@@ -353,15 +354,41 @@ section.pricing > p {
   color: var(--text-muted);
 }
 
-section.pricing > ul {
-  position: relative;
-  display: flex;
-  gap: 1.875rem;
-  margin-top: 4rem;
+section.pricing > div button {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
 }
 
-section.pricing .pricing-card {
-  height: 100%;
+section.pricing > div button:nth-child(1) {
+  top: 50%;
+  right: calc(100% - 1.5rem);
+  transform: translateY(-50%);
+}
+
+section.pricing > div button:nth-child(2) {
+  top: 50%;
+  left: calc(100% - 1.5rem);
+  transform: translateY(-50%);
+}
+
+section .pricing-plans {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+  margin-top: 4rem;
+  padding-block: 0.5rem;
+}
+
+section .pricing-plans > button svg {
+  display: block;
+}
+
+section .pricing-plans .pricing-card {
+  width: 22rem;
+  flex-shrink: 0;
   padding-block: 1.25rem 3rem;
   padding-inline: 1.75rem 1.5rem;
   border-radius: var(--radius-lg);
@@ -370,28 +397,28 @@ section.pricing .pricing-card {
   color: var(--text);
 }
 
-section.pricing li:nth-child(2) .pricing-card {
+section .pricing-plans .pricing-card:nth-child(2) {
   margin-top: -1.5rem;
   height: calc(100% + 1.5rem);
 }
 
-section.pricing .pricing-card h1 {
+section .pricing-plans .pricing-card h1 {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 500;
 }
 
-section.pricing .pricing-card h2 {
+section .pricing-plans .pricing-card h2 {
   margin-top: 1.25rem;
   font-size: 1.75rem;
   font-weight: 600;
 }
 
-section.pricing li:last-child .pricing-card h2 {
+section .pricing-plans .pricing-card:last-child h2 {
   font-size: 1.5rem;
 }
 
-section.pricing .pricing-card p {
+section .pricing-plans .pricing-card p {
   margin-top: 1rem;
   line-height: 1.5;
   font-size: 1rem;
@@ -399,7 +426,7 @@ section.pricing .pricing-card p {
   color: var(--text-muted);
 }
 
-section.pricing .pricing-card a {
+section .pricing-plans .pricing-card a {
   display: inline-block;
   margin-top: 1.25rem;
   padding: 0.5rem 1.5rem;
@@ -412,15 +439,15 @@ section.pricing .pricing-card a {
   border-radius: var(--radius-md);
 }
 
-section.pricing .pricing-card a:hover {
+section .pricing-plans .pricing-card a:hover {
   background: linear-gradient(0deg, var(--bg4) 0%, var(--bg5) 100%);
 }
 
-section.pricing .features {
+section .pricing-plans .features {
   margin-top: 1.5rem;
 }
 
-section.pricing .features li {
+section .pricing-plans .features li {
   position: relative;
   padding-left: 1.5rem;
   line-height: 1.5;
@@ -429,11 +456,11 @@ section.pricing .features li {
   color: var(--text-muted);
 }
 
-section.pricing .features li + li {
+section .pricing-plans .features li + li {
   margin-top: 0.5rem;
 }
 
-section.pricing .features li::before {
+section .pricing-plans .features li::before {
   content: "";
   position: absolute;
   top: 0.625rem;
@@ -473,6 +500,17 @@ footer .social-links a svg {
 
 footer .social-links a:hover svg {
   fill: var(--text);
+}
+
+@media (max-width: 1152px) {
+  section.pricing > div button {
+    display: block;
+  }
+
+  section.pricing .pricing-card:not(.focus) {
+    opacity: 0.4;
+    filter: blur(2px);
+  }
 }
 
 @media (max-width: 960px) {

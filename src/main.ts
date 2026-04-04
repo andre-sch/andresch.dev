@@ -71,6 +71,72 @@ for (const link of menuModalLinks) {
   });
 }
 
+/* Pricing plans */
+
+const pricingPreviousButton = document.querySelector(".pricing-nav-button.previous");
+const pricingNextButton = document.querySelector(".pricing-nav-button.next");
+
+window.addEventListener("resize", function resetPricingPlansOrder() {
+  if (window.innerWidth > 1152) {
+    const pricingCards = document.querySelectorAll(".pricing-card");
+    pricingCards.forEach((card, index) => {
+      const cardElement = card as HTMLElement;
+      cardElement.style.removeProperty("order");
+
+      cardElement.classList.remove("focus");
+      if (index === 1) cardElement.classList.add("focus");
+    });
+  }
+});
+
+pricingPreviousButton?.addEventListener("click", function previousPricingPlan() {
+  const currentCard = document.querySelector(".pricing-card.focus");
+  const parentNode = currentCard?.parentElement;
+
+  if (!currentCard || !parentNode) return;
+
+  const currentIndex = Array.from(parentNode.children).indexOf(currentCard);
+
+  let nextIndex = (currentIndex - 1) % parentNode.children.length;
+  if (nextIndex === -1) nextIndex = parentNode.children.length - 1;
+  const nextCard = parentNode.children[nextIndex];
+
+  if (!nextCard) return;
+
+  currentCard.classList.remove("focus");
+  nextCard.classList.add("focus");
+
+  Array.from(parentNode.children).forEach((card, index) => {
+    const cardElement = card as HTMLElement;
+    const order = Number(cardElement.style.order || index) + 1;
+    cardElement.style.order = String(order % parentNode.children.length);
+  });
+});
+
+pricingNextButton?.addEventListener("click", function nextPricingPlan() {
+  const currentCard = document.querySelector(".pricing-card.focus");
+  const parentNode = currentCard?.parentElement;
+
+  if (!currentCard || !parentNode) return;
+
+  const currentIndex = Array.from(parentNode.children).indexOf(currentCard);
+
+  const nextIndex = (currentIndex + 1) % parentNode.children.length;
+  const nextCard = parentNode.children[nextIndex];
+
+  if (!nextCard) return;
+
+  currentCard.classList.remove("focus");
+  nextCard.classList.add("focus");
+
+  Array.from(parentNode.children).forEach((card, index) => {
+    const cardElement = card as HTMLElement;
+    let order = Number(cardElement.style.order || index) - 1;
+    if (order === -1) order = parentNode.children.length - 1;
+    cardElement.style.order = String(order % parentNode.children.length);
+  });
+});
+
 /* Icons */
 
 const arrowIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>`;
