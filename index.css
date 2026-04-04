@@ -30,6 +30,8 @@ a {
   --bg5: hsl(0, 0%, 35%);
   --text: hsl(0, 0%, 90%);
   --text-muted: hsl(0, 0%, 70%);
+  --purple: hsl(258, 72%, 70%);
+  --purple-dark: hsl(258, 80%, 68%);
   --top-highlight-sm: 0px -1px 0px 0px hsl(0, 0%, 50%);
   --top-highlight-md: 0px -2px 0px 0px hsl(0, 0%, 50%);
   --shadow-sm: 0 1px 3px 0 hsla(0, 0%, 0%, 0.1), 0 1px 2px -1px hsla(0, 0%, 0%, 0.1);
@@ -42,11 +44,10 @@ a {
 }
 
 body.light-theme {
-  --bg0: hsl(0, 0%, 87%);
-  --bg1: hsl(0, 0%, 90%);
-  --bg2: hsl(0, 0%, 93%);
-  --bg3: hsl(0, 0%, 96%);
-  --bg4: hsl(0, 0%, 99%);
+  --bg0: hsl(0, 0%, 90%);
+  --bg1: hsl(0, 0%, 93%);
+  --bg2: hsl(0, 0%, 96%);
+  --bg3: hsl(0, 0%, 99%);
   --text: hsl(0, 0%, 10%);
   --text-muted: hsl(0, 0%, 40%);
 }
@@ -248,12 +249,18 @@ section.hero a.primary {
   color: var(--text);
 }
 
+section.hero a.primary:hover {
+  background-color: var(--bg3);
+}
+
 .light-theme section.hero a.primary {
+  color: hsl(0, 0%, 98%);
+  background: linear-gradient(0deg, hsl(129, 63%, 44%) 0%, hsl(126, 69%, 46%) 100%);
   box-shadow: var(--shadow-sm);
 }
 
-section.hero a.primary:hover {
-  background-color: var(--bg3);
+.light-theme section.hero a.primary:hover {
+  background: linear-gradient(0deg, hsl(129, 63%, 41%) 0%, hsl(126, 69%, 43%) 100%);
 }
 
 section.hero a.secondary svg {
@@ -346,6 +353,14 @@ section.products .product-card {
 .light-theme section.products .product-card {
   background: var(--bg2);
   box-shadow: var(--shadow-sm);
+}
+
+section.products .product-card svg {
+  stroke: var(--purple);
+}
+
+.light-theme section.products .product-card svg {
+  stroke: var(--purple-dark);
 }
 
 section.products .product-card h1 {
@@ -479,12 +494,13 @@ section .pricing-plans .pricing-card a:hover {
 }
 
 .light-theme section .pricing-plans .pricing-card a {
-  background: var(--bg3);
+  color: hsl(0, 0%, 98%);
+  background: linear-gradient(0deg, hsl(0, 0%, 15%), hsl(0, 0%, 20%));
   box-shadow: var(--shadow-sm);
 }
 
 .light-theme section .pricing-plans .pricing-card a:hover {
-  background: var(--bg4);
+  background: linear-gradient(0deg, hsl(0, 0%, 25%), hsl(0, 0%, 30%));
 }
 
 section .pricing-plans .features {
