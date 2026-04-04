@@ -42,13 +42,13 @@ a {
 }
 
 body.light-theme {
-  --bg0: hsl(0, 0%, 90%);
-  --bg1: hsl(0, 0%, 85%);
-  --bg2: hsl(0, 0%, 80%);
-  --bg3: hsl(0, 0%, 75%);
-  --bg4: hsl(0, 0%, 70%);
+  --bg0: hsl(0, 0%, 87%);
+  --bg1: hsl(0, 0%, 90%);
+  --bg2: hsl(0, 0%, 93%);
+  --bg3: hsl(0, 0%, 96%);
+  --bg4: hsl(0, 0%, 99%);
   --text: hsl(0, 0%, 10%);
-  --text-muted: hsl(0, 0%, 30%);
+  --text-muted: hsl(0, 0%, 40%);
 }
 
 body {
@@ -150,6 +150,11 @@ header .modal {
   z-index: 1;
 }
 
+.light-theme header .modal {
+  background: var(--bg2);
+  box-shadow: var(--shadow-sm);
+}
+
 header .modal.open {
   display: flex;
   flex-direction: column;
@@ -243,6 +248,10 @@ section.hero a.primary {
   color: var(--text);
 }
 
+.light-theme section.hero a.primary {
+  box-shadow: var(--shadow-sm);
+}
+
 section.hero a.primary:hover {
   background-color: var(--bg3);
 }
@@ -254,6 +263,21 @@ section.hero a.secondary svg {
 
 section.hero a.secondary:hover {
   background-color: var(--bg1);
+}
+
+section.hero .dark-overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.4) 0%, hsla(0, 0%, 0%, 0) 100%);
+  border-radius: var(--radius-xl);
+}
+
+.light-theme section.hero .dark-overlay {
+  display: none;
 }
 
 section.hero img {
@@ -272,13 +296,13 @@ section.hero .blur-highlight {
   border-radius: 50%;
 }
 
-section.hero .blur-highlight:first-of-type {
+section.hero .blur-highlight.yellow {
   top: 10%;
   left: 30%;
   box-shadow: 0px 0px 175px 75px hsla(67, 92%, 59%, 0.5);
 }
 
-section.hero .blur-highlight:last-of-type {
+section.hero .blur-highlight.purple {
   bottom: 10%;
   right: 20%;
   box-shadow: 0px 0px 175px 75px hsla(255, 73%, 64%, 0.5);
@@ -317,6 +341,11 @@ section.products .product-card {
   background: linear-gradient(0deg, var(--bg1) 0%, var(--bg2) 100%);
   box-shadow: var(--shadow-md), var(--top-highlight-md);
   color: var(--text);
+}
+
+.light-theme section.products .product-card {
+  background: var(--bg2);
+  box-shadow: var(--shadow-sm);
 }
 
 section.products .product-card h1 {
@@ -398,6 +427,11 @@ section .pricing-plans .pricing-card {
   color: var(--text);
 }
 
+.light-theme section .pricing-plans .pricing-card {
+  background: var(--bg2);
+  box-shadow: var(--shadow-sm);
+}
+
 section .pricing-plans .pricing-card:nth-child(2) {
   margin-top: -1.5rem;
   height: calc(100% + 1.5rem);
@@ -442,6 +476,15 @@ section .pricing-plans .pricing-card a {
 
 section .pricing-plans .pricing-card a:hover {
   background: linear-gradient(0deg, var(--bg4) 0%, var(--bg5) 100%);
+}
+
+.light-theme section .pricing-plans .pricing-card a {
+  background: var(--bg3);
+  box-shadow: var(--shadow-sm);
+}
+
+.light-theme section .pricing-plans .pricing-card a:hover {
+  background: var(--bg4);
 }
 
 section .pricing-plans .features {
