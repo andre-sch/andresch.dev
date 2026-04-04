@@ -191,7 +191,6 @@ header .menu-button svg {
 
 main {
   padding: 0 2rem;
-  overflow-x: hidden;
 }
 
 section.hero {
@@ -380,6 +379,8 @@ section .pricing-plans {
   gap: 1.875rem;
   margin-top: 4rem;
   padding-block: 0.5rem;
+  padding-top: 1.75rem;
+  overflow-x: hidden;
 }
 
 section .pricing-plans > button svg {
