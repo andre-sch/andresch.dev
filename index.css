@@ -552,7 +552,7 @@ footer .social-links a:hover svg {
   }
 
   section.pricing .pricing-card:not(.focus) {
-    opacity: 0.4;
+    opacity: 0.5;
     filter: blur(2px);
   }
 }
