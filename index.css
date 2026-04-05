@@ -243,6 +243,10 @@ section.hero a {
   font-family: "Inter", sans-serif;
 }
 
+section.hero a svg {
+  flex-shrink: 0;
+}
+
 section.hero a.primary {
   box-shadow: var(--shadow-lg);
   background-color: var(--bg2);
