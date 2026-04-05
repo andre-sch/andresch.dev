@@ -380,7 +380,13 @@ section.products .product-card p {
 }
 
 section.pricing {
+  position: relative;
+  top: 0;
+  left: -2rem;
+  width: calc(100% + 4rem);
+  padding-inline: 2rem;
   padding-block: 6rem;
+  overflow-x: hidden;
 }
 
 section.pricing > h1 {
@@ -423,9 +429,7 @@ section .pricing-plans {
   justify-content: center;
   gap: 1.875rem;
   margin-top: 4rem;
-  padding-block: 0.5rem;
   padding-top: 1.75rem;
-  overflow-x: hidden;
 }
 
 section .pricing-plans > button svg {
